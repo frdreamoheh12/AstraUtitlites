@@ -1,73 +1,425 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Free Minecraft developer utilities for colors, fonts, gradients, resource packs, plugins, GUIs and more." />
-  <meta name="theme-color" content="#0b1020" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta name="description" content="Free Minecraft developer utilities for colors, fonts, gradients, resource packs, plugins, GUIs and more.">
+  <meta name="theme-color" content="#0b1020">
+
   <title>AstraUtilities — Free Minecraft Developer Tools</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <div class="stars" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="AstraUtilities home"><span class="brand-mark">✦</span>Astra<span>Utilities</span></a>
+
+    <a class="brand" href="#home" aria-label="AstraUtilities home">
+      <span class="brand-mark">✦</span>
+      Astra<span>Utilities</span>
+    </a>
+
     <nav class="nav" aria-label="Primary navigation">
-      <a href="#tools">Tools</a><a href="#generators">Generators</a><a href="#fonts">Fonts</a><a href="#colors">Colors</a><a href="#resource-packs">Resource Packs</a><a href="#plugins">Plugins</a>
+      <a href="#tools">Tools</a>
+      <a href="#generators">Generators</a>
+      <a href="#fonts">Fonts</a>
+      <a href="#colors">Colors</a>
+      <a href="#resource-packs">Resource Packs</a>
+      <a href="#plugins">Plugins</a>
     </nav>
+
     <div class="header-actions">
-      <button class="icon-button" id="searchButton" aria-label="Search tools" title="Search (Ctrl + K)">⌕</button>
-      <button class="icon-button" id="settingsButton" aria-label="Open settings">⚙</button>
-      <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+      <button
+        class="icon-button"
+        id="searchButton"
+        aria-label="Search tools"
+        title="Search (Ctrl + K)"
+      >⌕</button>
+
+      <button
+        class="icon-button"
+        id="settingsButton"
+        aria-label="Open settings"
+      >⚙</button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation"
+      >☰</button>
     </div>
+
   </header>
 
+
   <main id="home">
+
     <section class="hero">
-      <div class="eyebrow"><span></span> BUILT FOR MINECRAFT DEVELOPMENT</div>
-      <h1>Everything Minecraft<br><em>developers need.</em></h1>
-      <p>Free tools for plugins, resource packs, GUIs, configurations, fonts, colors and more — all in your browser.</p>
-      <div class="hero-buttons"><a class="btn primary" href="#tools">Explore tools <b>→</b></a><button class="btn secondary" id="openSearchHero">Start creating</button></div>
-      <div class="search-shell hero-search"><span>⌕</span><input id="heroSearch" type="search" placeholder="Search tools, generators, colors, fonts..." autocomplete="off" /><kbd>Ctrl K</kbd></div>
-      <div class="badges"><span>✦ 100% Free</span><span>⚡ No login required</span><span>⧉ Instant copy</span><span>◈ GitHub Pages ready</span></div>
+
+      <div class="eyebrow">
+        <span></span>
+        BUILT FOR MINECRAFT DEVELOPMENT
+      </div>
+
+      <h1>
+        Everything Minecraft<br>
+        <em>developers need.</em>
+      </h1>
+
+      <p>
+        Free tools for plugins, resource packs, GUIs, configurations,
+        fonts, colors and more — all in your browser.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a class="btn primary" href="#tools">
+          Explore tools <b>→</b>
+        </a>
+
+        <button class="btn secondary" id="openSearchHero">
+          Start creating
+        </button>
+
+      </div>
+
+      <div class="search-shell hero-search">
+
+        <span>⌕</span>
+
+        <input
+          id="heroSearch"
+          type="search"
+          placeholder="Search tools, generators, colors, fonts..."
+          autocomplete="off"
+        >
+
+        <kbd>Ctrl K</kbd>
+
+      </div>
+
+      <div class="badges">
+        <span>✦ 100% Free</span>
+        <span>⚡ No login required</span>
+        <span>⧉ Instant copy</span>
+        <span>◈ GitHub Pages ready</span>
+      </div>
+
     </section>
+
 
     <section class="tool-section" id="tools">
-      <div class="section-heading"><div><span class="eyebrow"><span></span> TOOLKIT</span><h2>Start with a real tool.</h2><p>Core utilities built to create, preview, copy, and download without a backend.</p></div><button class="text-button" id="showFavorites">★ Favorites</button></div>
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="eyebrow">
+            <span></span>
+            TOOLKIT
+          </span>
+
+          <h2>Start with a real tool.</h2>
+
+          <p>
+            Core utilities built to create, preview, copy,
+            and download without a backend.
+          </p>
+
+        </div>
+
+        <button class="text-button" id="showFavorites">
+          ★ Favorites
+        </button>
+
+      </div>
+
       <div id="toolGrid" class="tool-grid"></div>
+
     </section>
+
 
     <section class="feature-section" id="generators">
-      <div class="section-heading"><div><span class="eyebrow"><span></span> WHY ASTRA</span><h2>Made for Minecraft developers.</h2></div></div>
-      <div class="feature-grid">
-        <article><i>⧉</i><h3>Copy without errors</h3><p>Reliable clipboard handling for Unicode, YAML, JSON and Minecraft formatting.</p></article>
-        <article><i>⚡</i><h3>Instant generators</h3><p>Generate configs and commands directly in your browser.</p></article>
-        <article><i>◇</i><h3>Resource-pack ready</h3><p>Create fonts, glyphs, models and pack files with clean exports.</p></article>
-        <article><i>◎</i><h3>No account required</h3><p>Open a tool and start creating. Preferences stay on your device.</p></article>
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="eyebrow">
+            <span></span>
+            WHY ASTRA
+          </span>
+
+          <h2>Made for Minecraft developers.</h2>
+
+        </div>
+
       </div>
+
+
+      <div class="feature-grid">
+
+        <article>
+          <i>⧉</i>
+          <h3>Copy without errors</h3>
+          <p>
+            Reliable clipboard handling for Unicode,
+            YAML, JSON and Minecraft formatting.
+          </p>
+        </article>
+
+        <article>
+          <i>⚡</i>
+          <h3>Instant generators</h3>
+          <p>
+            Generate configs and commands directly
+            in your browser.
+          </p>
+        </article>
+
+        <article>
+          <i>◇</i>
+          <h3>Resource-pack ready</h3>
+          <p>
+            Create fonts, glyphs, models and pack
+            files with clean exports.
+          </p>
+        </article>
+
+        <article>
+          <i>◎</i>
+          <h3>No account required</h3>
+          <p>
+            Open a tool and start creating.
+            Preferences stay on your device.
+          </p>
+        </article>
+
+      </div>
+
     </section>
+
 
     <section class="tool-section categories" id="resource-packs">
-      <div class="section-heading"><div><span class="eyebrow"><span></span> EXPLORE</span><h2>A focused developer workspace.</h2></div></div>
-      <div class="category-grid">
-        <button data-open-tool="small-font"><b>𝒜</b><span>Text & Fonts<small>Create readable Minecraft-compatible text.</small></span></button>
-        <button data-open-tool="hex"><b>◉</b><span>Colors & Gradients<small>HEX, RGB, MiniMessage and legacy colors.</small></span></button>
-        <button data-open-tool="model"><b>◇</b><span>Resource Packs<small>Models, fonts, glyphs and pack metadata.</small></span></button>
-        <button data-open-tool="gui"><b>▦</b><span>GUI Tools<small>Build inventory layouts and export YAML.</small></span></button>
-        <button data-open-tool="plugin"><b>⌘</b><span>Plugin Development<small>Generate plugin descriptors quickly.</small></span></button>
-        <button data-open-tool="json"><b>{ }</b><span>Config Tools<small>Format and validate JSON locally.</small></span></button>
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="eyebrow">
+            <span></span>
+            EXPLORE
+          </span>
+
+          <h2>A focused developer workspace.</h2>
+
+        </div>
+
       </div>
+
+
+      <div class="category-grid">
+
+        <button data-open-tool="small-font">
+          <b>𝒜</b>
+          <span>
+            Text & Fonts
+            <small>Create readable Minecraft-compatible text.</small>
+          </span>
+        </button>
+
+        <button data-open-tool="hex">
+          <b>◉</b>
+          <span>
+            Colors & Gradients
+            <small>HEX, RGB, MiniMessage and legacy colors.</small>
+          </span>
+        </button>
+
+        <button data-open-tool="model">
+          <b>◇</b>
+          <span>
+            Resource Packs
+            <small>Models, fonts, glyphs and pack metadata.</small>
+          </span>
+        </button>
+
+        <button data-open-tool="gui">
+          <b>▦</b>
+          <span>
+            GUI Tools
+            <small>Build inventory layouts and export YAML.</small>
+          </span>
+        </button>
+
+        <button data-open-tool="plugin">
+          <b>⌘</b>
+          <span>
+            Plugin Development
+            <small>Generate plugin descriptors quickly.</small>
+          </span>
+        </button>
+
+        <button data-open-tool="json">
+          <b>{ }</b>
+          <span>
+            Config Tools
+            <small>Format and validate JSON locally.</small>
+          </span>
+        </button>
+
+      </div>
+
     </section>
+
   </main>
 
-  <footer id="plugins"><div><a class="brand" href="#home"><span class="brand-mark">✦</span>Astra<span>Utilities</span></a><p>Everything Minecraft developers need.</p></div><div class="footer-links"><a href="#tools">Tools</a><a href="#generators">Documentation</a><a href="#home">GitHub</a><a href="#home">Discord</a></div><small>© 2026 AstraUtilities. Built for creators.</small></footer>
 
-  <div class="modal" id="toolModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="toolTitle"><div class="modal-card tool-modal-card"><button class="close" data-close aria-label="Close">×</button><div id="toolContent"></div></div></div>
-  <div class="modal" id="searchModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search tools"><div class="modal-card search-modal"><button class="close" data-close aria-label="Close">×</button><div class="search-shell"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search every tool..." autocomplete="off" /><kbd>Esc</kbd></div><p class="search-note">Use ↑ ↓ and Enter to select • Recent & favorite tools appear first</p><div id="searchResults" class="search-results"></div></div></div>
-  <div class="modal" id="settingsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Settings"><div class="modal-card settings-modal"><button class="close" data-close aria-label="Close">×</button><h2>Settings</h2><label class="setting-row">Light mode <input id="themeToggle" type="checkbox" role="switch"></label><label class="setting-row">Reduced motion <input id="motionToggle" type="checkbox" role="switch"></label><button class="btn danger" id="clearData">Clear saved data</button></div></div>
+  <footer id="plugins">
+
+    <div>
+
+      <a class="brand" href="#home">
+        <span class="brand-mark">✦</span>
+        Astra<span>Utilities</span>
+      </a>
+
+      <p>Everything Minecraft developers need.</p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#tools">Tools</a>
+      <a href="#generators">Documentation</a>
+      <a href="https://github.com/frdreamoheh12/AstraUtitlites">
+        GitHub
+      </a>
+      <a href="#home">Discord</a>
+
+    </div>
+
+    <small>
+      © 2026 AstraUtilities. Built for creators.
+    </small>
+
+  </footer>
+
+
+  <div
+    class="modal"
+    id="toolModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="toolTitle"
+  >
+
+    <div class="modal-card tool-modal-card">
+
+      <button
+        class="close"
+        data-close
+        aria-label="Close"
+      >×</button>
+
+      <div id="toolContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="modal"
+    id="searchModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Search tools"
+  >
+
+    <div class="modal-card search-modal">
+
+      <button
+        class="close"
+        data-close
+        aria-label="Close"
+      >×</button>
+
+      <div class="search-shell">
+
+        <span>⌕</span>
+
+        <input
+          id="globalSearch"
+          type="search"
+          placeholder="Search every tool..."
+          autocomplete="off"
+        >
+
+        <kbd>Esc</kbd>
+
+      </div>
+
+      <p class="search-note">
+        Use ↑ ↓ and Enter to select • Recent & favorite tools appear first
+      </p>
+
+      <div id="searchResults" class="search-results"></div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="modal"
+    id="settingsModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Settings"
+  >
+
+    <div class="modal-card settings-modal">
+
+      <button
+        class="close"
+        data-close
+        aria-label="Close"
+      >×</button>
+
+      <h2>Settings</h2>
+
+      <label class="setting-row">
+        Light mode
+        <input id="themeToggle" type="checkbox" role="switch">
+      </label>
+
+      <label class="setting-row">
+        Reduced motion
+        <input id="motionToggle" type="checkbox" role="switch">
+      </label>
+
+      <button class="btn danger" id="clearData">
+        Clear saved data
+      </button>
+
+    </div>
+
+  </div>
+
+
   <div id="toast" role="status" aria-live="polite"></div>
-  <script src="assets/js/app.js"></script>
+
+
+  <!-- IMPORTANT: app.js is in the repository root -->
+  <script src="app.js"></script>
+
 </body>
 </html>
